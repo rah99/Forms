@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="results.html" method="GET" enctype="multipart/form-data">
+        <!-- "enctype" used where files are uploaded with other form data -->
+        <div>
+            <h2>Form</h2>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="username" required>
+            </div>
+            <div>
+                <label for="email">Password</label>
+                <input type="email" name="email" id="email" placeholder="email" required>
+            </div>
+            <div>
+                <label for="age">Password</label>
+                <input type="number" name="age" id="age" placeholder="age" min="1" max="200" step="10">
+            </div>
+            <div>
+                <label for="bdate">Birthdate</label>
+                <input type="date" name="bdate" id="bdate">
+                <!-- Can apply min and max values here with syntax min="yyyy-mm-dd" max="yyyy-mm-dd" -->
+            </div>
+        </div>
+        <div>
+            <h2>Favourite Food</h2>
+            <div>
+                <label for="banana">Banana</label>
+                <input type="checkbox" name="banana" id="banana">
+            </div>
+            <div>
+                <label for="apple">Apple</label>
+                <input type="checkbox" name="apple" id="apple">
+            </div>
+        </div>
+        <div>
+            <h2>Gender</h2>
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <!-- Sharing the name of the radio button type means only one can be selected -->
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+            <div>
+                <label for="attackHelicopter">Attack Helicopter</label>
+                <input type="radio" name="gender" id="attackHelicopter" value="attack helicopter">
+            </div>
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor" multiple>
+                <!-- Omitting "multiple means only one item can be selected"-->
+                <option value="Green">Green</option>
+                <option label="Blue" value="Blue"></option>
+                <option value="Brown">Brown</option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Biography</label>
+            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+            <!-- Make sure not to leave any white-space with textarea or this wilkl be rendered -->
+        </div>
+        <input type="hidden" name="hidden" value="hi">
+        <div>
+            <label for="file">File</label>
+            <input type="file" name="file" id="file">
+        </div>
+        <div>
+            <label for="phone">Phone number</label>
+            <input type="tel" name="phone" id="phone">
+            <!-- "tel" type where on mobile device it will call the number keypad -->
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url">
+            <!-- "url" type where on mobile device it will call the url keypad -->
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" name="password" id="pass" placeholder="password" required>
+        </div>
+        <button type="reset">Reset</button>
+        <Button type="submit">Log In</Button>
+    </form>
+</body>
+
+</html>
